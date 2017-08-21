@@ -48,9 +48,33 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
+        
+        configuration.planeDetection = .horizontal
 
         // Run the view's session
         sceneView.session.run(configuration)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        print("added")
+        
+        if let plane = anchor as? ARPlaneAnchor {
+            
+            print("X: \(plane.extent.x)m Z: \(plane.extent.z)m")
+            
+            
+            
+        }
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        if let plane = anchor as? ARPlaneAnchor {
+            
+            print("X: \(plane.extent.x)m Z: \(plane.extent.z)m")
+            
+            
+            
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
