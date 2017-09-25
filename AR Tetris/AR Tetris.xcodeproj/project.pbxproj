@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA1229081F4AD810005561BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1229071F4AD810005561BC /* AppDelegate.swift */; };
+		FA12290A1F4AD810005561BC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1229091F4AD810005561BC /* art.scnassets */; };
+		FA12290C1F4AD810005561BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12290B1F4AD810005561BC /* ViewController.swift */; };
+		FA12290F1F4AD810005561BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA12290D1F4AD810005561BC /* Main.storyboard */; };
+		FA1229111F4AD810005561BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1229101F4AD810005561BC /* Assets.xcassets */; };
+		FA1229141F4AD810005561BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1229121F4AD810005561BC /* LaunchScreen.storyboard */; };
+		FA1229211F4AD827005561BC /* TetrisState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12291B1F4AD826005561BC /* TetrisState.swift */; };
+		FA1229221F4AD827005561BC /* Tetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12291C1F4AD826005561BC /* Tetromino.swift */; };
+		FA1229231F4AD827005561BC /* TetrisConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12291D1F4AD826005561BC /* TetrisConfig.swift */; };
+		FA1229241F4AD827005561BC /* TetrisWell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12291E1F4AD827005561BC /* TetrisWell.swift */; };
+		FA1229251F4AD827005561BC /* TetrisEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12291F1F4AD827005561BC /* TetrisEngine.swift */; };
+		FA1229261F4AD827005561BC /* TetrisScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1229201F4AD827005561BC /* TetrisScene.swift */; };
+		FA1229271F4AD983005561BC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA1229151F4AD810005561BC /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA1229041F4AD810005561BC /* AR Tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Tetris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1229071F4AD810005561BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA1229091F4AD810005561BC /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		FA12290B1F4AD810005561BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA12290E1F4AD810005561BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA1229101F4AD810005561BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA1229131F4AD810005561BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA1229151F4AD810005561BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA12291B1F4AD826005561BC /* TetrisState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisState.swift; sourceTree = "<group>"; };
+		FA12291C1F4AD826005561BC /* Tetromino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tetromino.swift; sourceTree = "<group>"; };
+		FA12291D1F4AD826005561BC /* TetrisConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisConfig.swift; sourceTree = "<group>"; };
+		FA12291E1F4AD827005561BC /* TetrisWell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisWell.swift; sourceTree = "<group>"; };
+		FA12291F1F4AD827005561BC /* TetrisEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisEngine.swift; sourceTree = "<group>"; };
+		FA1229201F4AD827005561BC /* TetrisScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisScene.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA1229011F4AD810005561BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA1228FB1F4AD810005561BC = {
+			isa = PBXGroup;
+			children = (
+				FA1229061F4AD810005561BC /* AR Tetris */,
+				FA1229051F4AD810005561BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA1229051F4AD810005561BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA1229041F4AD810005561BC /* AR Tetris.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA1229061F4AD810005561BC /* AR Tetris */ = {
+			isa = PBXGroup;
+			children = (
+				FA1229071F4AD810005561BC /* AppDelegate.swift */,
+				FA1229091F4AD810005561BC /* art.scnassets */,
+				FA12290B1F4AD810005561BC /* ViewController.swift */,
+				FA12290D1F4AD810005561BC /* Main.storyboard */,
+				FA1229101F4AD810005561BC /* Assets.xcassets */,
+				FA1229121F4AD810005561BC /* LaunchScreen.storyboard */,
+				FA1229151F4AD810005561BC /* Info.plist */,
+				FA12291D1F4AD826005561BC /* TetrisConfig.swift */,
+				FA12291F1F4AD827005561BC /* TetrisEngine.swift */,
+				FA1229201F4AD827005561BC /* TetrisScene.swift */,
+				FA12291B1F4AD826005561BC /* TetrisState.swift */,
+				FA12291E1F4AD827005561BC /* TetrisWell.swift */,
+				FA12291C1F4AD826005561BC /* Tetromino.swift */,
+			);
+			path = "AR Tetris";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA1229031F4AD810005561BC /* AR Tetris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1229181F4AD810005561BC /* Build configuration list for PBXNativeTarget "AR Tetris" */;
+			buildPhases = (
+				FA1229001F4AD810005561BC /* Sources */,
+				FA1229011F4AD810005561BC /* Frameworks */,
+				FA1229021F4AD810005561BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AR Tetris";
+			productName = "AR Tetris";
+			productReference = FA1229041F4AD810005561BC /* AR Tetris.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA1228FC1F4AD810005561BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Alex Wong";
+				TargetAttributes = {
+					FA1229031F4AD810005561BC = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = FA1228FF1F4AD810005561BC /* Build configuration list for PBXProject "AR Tetris" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA1228FB1F4AD810005561BC;
+			productRefGroup = FA1229051F4AD810005561BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA1229031F4AD810005561BC /* AR Tetris */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA1229021F4AD810005561BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA12290A1F4AD810005561BC /* art.scnassets in Resources */,
+				FA1229141F4AD810005561BC /* LaunchScreen.storyboard in Resources */,
+				FA1229111F4AD810005561BC /* Assets.xcassets in Resources */,
+				FA1229271F4AD983005561BC /* Info.plist in Resources */,
+				FA12290F1F4AD810005561BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA1229001F4AD810005561BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA12290C1F4AD810005561BC /* ViewController.swift in Sources */,
+				FA1229211F4AD827005561BC /* TetrisState.swift in Sources */,
+				FA1229251F4AD827005561BC /* TetrisEngine.swift in Sources */,
+				FA1229081F4AD810005561BC /* AppDelegate.swift in Sources */,
+				FA1229231F4AD827005561BC /* TetrisConfig.swift in Sources */,
+				FA1229261F4AD827005561BC /* TetrisScene.swift in Sources */,
+				FA1229241F4AD827005561BC /* TetrisWell.swift in Sources */,
+				FA1229221F4AD827005561BC /* Tetromino.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA12290D1F4AD810005561BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA12290E1F4AD810005561BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA1229121F4AD810005561BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA1229131F4AD810005561BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA1229161F4AD810005561BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA1229171F4AD810005561BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA1229191F4AD810005561BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6YBEZVR7NX;
+				INFOPLIST_FILE = "AR Tetris/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alwongg.AR-Tetris";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA12291A1F4AD810005561BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6YBEZVR7NX;
+				INFOPLIST_FILE = "AR Tetris/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alwongg.AR-Tetris";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA1228FF1F4AD810005561BC /* Build configuration list for PBXProject "AR Tetris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1229161F4AD810005561BC /* Debug */,
+				FA1229171F4AD810005561BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1229181F4AD810005561BC /* Build configuration list for PBXNativeTarget "AR Tetris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1229191F4AD810005561BC /* Debug */,
+				FA12291A1F4AD810005561BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA1228FC1F4AD810005561BC /* Project object */;
+}
