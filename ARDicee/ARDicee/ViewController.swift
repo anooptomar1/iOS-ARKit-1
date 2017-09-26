@@ -12,6 +12,10 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     
+    // MARK: - Properties
+    
+    var diceArray = [SCNNode]()
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -23,37 +27,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show debug
         
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
-        
-        // Create a cube
-        //let cube = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.01)
-        
-        //        let sphere = SCNSphere(radius: 0.2)
-        //
-        //        // Create material
-        //        let material = SCNMaterial()
-        //        material.diffuse.contents = UIImage(named: "art.scnassets/moon.jpg")
-        //
-        //        // Add material (which makes the cube red) to the cube
-        //        sphere.materials = [material]
-        //
-        //        // Create our node = points in 3D space
-        //        let node = SCNNode()
-        //
-        //        // Give it a position
-        //        node.position = SCNVector3(x: 0, y: 0.1, z: -0.5)
-        //
-        //        // Assign the node an object to display which is our cube
-        //        node.geometry = sphere
-        //
-        //        // Putting our node in the sceneview
-        //        sceneView.scene.rootNode.addChildNode(node)
-        
-        // By running now, cube may look flat and that is due to light, let's add it
+
         sceneView.autoenablesDefaultLighting = true
-        
-        
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,10 +36,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-        //enable horizontal plane detection
+        // Enable horizontal plane detection
         configuration.planeDetection = .horizontal
-        
-        
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -92,10 +65,43 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                         hitResult.worldTransform.columns.3.y + diceNode.boundingSphere.radius,
                         hitResult.worldTransform.columns.3.z)
                     
+                    diceArray.append(diceNode)
+                    
                     sceneView.scene.rootNode.addChildNode(diceNode)
+                    
+                    roll(dice: diceNode)
+
                 }
             }
         }
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        rollAll()
+    }
+    
+    @IBAction func rollAgain(_ sender: Any) {
+        
+        rollAll()
+        
+    }
+    
+    func rollAll(){
+        if !diceArray.isEmpty{
+            for dice in diceArray{
+                roll(dice: dice)
+            }
+        }
+    }
+    
+    func roll(dice: SCNNode){
+        // Animate the dice to give random number
+        let randomX = Float(arc4random_uniform(4) + 1) * (Float.pi/2)
+        let randomZ = Float(arc4random_uniform(4) + 1) * (Float.pi/2)
+        
+        dice.runAction(
+            SCNAction.rotateBy(x: CGFloat(randomX * 5), y: 0, z: CGFloat(randomZ * 5), duration: 0.5)
+        )
     }
     
     //detected surface
@@ -124,21 +130,5 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         } else {
             return
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
 }
