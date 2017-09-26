@@ -12,8 +12,10 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    // MARK: - IBOutlets
     @IBOutlet var sceneView: ARSCNView!
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,8 +53,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
     
-    // Delegate method from ARSCNViewDelegate
-    // Called when horizontal plane is detected
+    // MARK: - ARSCNViewDelegate Method
+    // Called when horizontal plane is detected - Delegate method from ARSCNViewDelegate
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if anchor is ARPlaneAnchor{
             let planeAnchor = anchor as! ARPlaneAnchor
@@ -83,19 +85,41 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             // add the plane node to our scene
             node.addChildNode(planeNode)
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
         } else {
             return
         }
-        
     }
+    
+    // MARK: - Touch Began
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first{
+            // gives us the location of where we touched on the 2D screen
+            let touchLocation = touch.location(in: sceneView)
+            
+            // HitTest is performed to get the 3D coordinates corresponding to the 2D coordinates that we got from touching the screen
+            // That 3D coordinate will only be considered when it is on the existing plane that we detected
+            let results = sceneView.hitTest(touchLocation, types: .existingPlaneUsingExtent)
+            
+            // if we have got some results using the hittest, then do this:
+            if let hitResult = results.first{
+                let boxScene = SCNScene(named: "art.scnassets/box.scn")!
+                
+                if let boxNode = boxScene.rootNode.childNode(withName: "box", recursively: true){
+                    boxNode.position = SCNVector3(x: hitResult.worldTransform.columns.3.x, y: hitResult.worldTransform.columns.3.y + boxNode.boundingSphere.radius, z: hitResult.worldTransform.columns.3.z)
+                    
+                    // box is added to the scene
+                    sceneView.scene.rootNode.addChildNode(boxNode)
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
