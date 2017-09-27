@@ -21,15 +21,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the view's delegate
         sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,9 +94,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             // if we have got some results using the hittest, then do this:
             if let hitResult = results.first{
-                let boxScene = SCNScene(named: "art.scnassets/box.scn")!
+                let boxScene = SCNScene(named: "art.scnassets/portal.scn")!
                 
-                if let boxNode = boxScene.rootNode.childNode(withName: "box", recursively: true){
+                if let boxNode = boxScene.rootNode.childNode(withName: "Portal", recursively: true){
                     boxNode.position = SCNVector3(x: hitResult.worldTransform.columns.3.x, y: hitResult.worldTransform.columns.3.y + boxNode.boundingSphere.radius, z: hitResult.worldTransform.columns.3.z)
                     
                     // box is added to the scene
